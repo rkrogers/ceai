@@ -99,6 +99,15 @@ app.get('/about.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
+// Serve static files explicitly
+app.get('/styles.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'styles.css'));
+});
+
+app.get('/app.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'app.js'));
+});
+
 // Export for Vercel serverless
 module.exports = app;
 
