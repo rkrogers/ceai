@@ -47,7 +47,7 @@ CEO AI is a humorous take on corporate communication, offering three distinct mo
    c. Edit `.env` and add your API key:
    ```
    GEMINI_API_KEY=your_actual_api_key_here
-   PORT=3000
+   PORT=3001
    ```
 
 4. **Start the server:**
@@ -57,7 +57,7 @@ CEO AI is a humorous take on corporate communication, offering three distinct mo
 
 5. **Open your browser:**
    ```
-   http://localhost:3000
+   http://localhost:3001
    ```
 
 ## Usage
