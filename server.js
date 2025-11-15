@@ -58,8 +58,8 @@ app.post('/api/ask', async (req, res) => {
       return res.status(400).json({ error: 'Invalid mode' });
     }
 
-    // Get the model
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    // Get the model (using Gemini 2.5 Flash - stable, fast, free)
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
     // Combine system prompt with user question
     const prompt = `${MODE_PROMPTS[mode]}\n\nQuestion: ${question}\n\nResponse:`;
