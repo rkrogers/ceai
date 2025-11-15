@@ -295,6 +295,30 @@ footer {
     margin-top: 8px;
 }
 
+/* Support Section */
+.support-section {
+    margin: 16px 0;
+}
+
+.coffee-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FFDD00;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-button:hover {
+    background: #FFED4E;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* About Page */
 .about-content {
     background: #f8f9fa;
