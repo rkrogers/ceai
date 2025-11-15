@@ -89,6 +89,16 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'CEO AI is ready' });
 });
 
+// Serve index.html for root path
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Serve about.html
+app.get('/about.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
 // Export for Vercel serverless
 module.exports = app;
 
