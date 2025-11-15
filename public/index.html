@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO AI - Artificial Executive Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="logo">CEO<span class="ai">AI</span></h1>
+            <p class="tagline">Artificial Executive Intelligence™</p>
+        </header>
+
+        <!-- Mode Selector -->
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="public">Public</button>
+            <button class="mode-btn" data-mode="ceo">CEO</button>
+            <button class="mode-btn" data-mode="private">Private</button>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-container">
+            <form id="ceo-form">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="question" 
+                        placeholder="Ask the CEO anything..." 
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="search-btn" id="ask-btn">
+                        Ask CEO
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Mode Description -->
+        <div class="mode-description">
+            <p id="mode-desc">Public mode: Corporate PR-friendly responses</p>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>The CEO is thinking...</p>
+        </div>
+
+        <!-- Response Container -->
+        <div class="response-container" id="response-container">
+            <div class="response-header">
+                <span class="response-mode" id="response-mode"></span>
+                <span class="response-question" id="response-question"></span>
+            </div>
+            <div class="response-text" id="response-text"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="disclaimer">⚠️ Satirical AI System - Responses are generated for entertainment purposes only</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
