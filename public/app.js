@@ -1,4 +1,4 @@
-// DOM Elements
+// DOM Elements (only select if they exist)
 const form = document.getElementById('ceo-form');
 const questionInput = document.getElementById('question');
 const askBtn = document.getElementById('ask-btn');
@@ -22,8 +22,14 @@ const modeDescriptions = {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    setupModeButtons();
-    setupForm();
+    // Only setup mode buttons and form if they exist (index page only)
+    if (modeBtns.length > 0) {
+        setupModeButtons();
+    }
+    if (form) {
+        setupForm();
+    }
+    // Always setup hamburger menu (exists on all pages)
     setupHamburgerMenu();
 });
 
