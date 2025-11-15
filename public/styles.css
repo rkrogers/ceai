@@ -495,11 +495,6 @@ footer {
     justify-content: center;
 }
 
-/* Hide the LinkedIn badge fallback link */
-.linkedin-embed .badge-base__link {
-    display: none;
-}
-
 /* Lab Page */
 .lab-content {
     margin-top: 30px;
