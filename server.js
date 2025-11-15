@@ -89,14 +89,19 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'CEO AI is ready' });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`
+// Export for Vercel serverless
+module.exports = app;
+
+// Start server only in development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`
 ╔═══════════════════════════════════════════╗
 ║        CEO AI - Satirical Edition         ║
 ╠═══════════════════════════════════════════╣
 ║  Server running on: http://localhost:${PORT}  ║
 ║  Open your browser to get started        ║
 ╚═══════════════════════════════════════════╝
-  `);
-});
+    `);
+  });
+}
