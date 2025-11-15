@@ -104,6 +104,11 @@ app.get('/who.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'who.html'));
 });
 
+// Serve lab.html
+app.get('/lab.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'lab.html'));
+});
+
 // Serve static files explicitly
 app.get('/styles.css', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'styles.css'));
