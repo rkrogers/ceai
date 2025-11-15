@@ -31,7 +31,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Always setup hamburger menu (exists on all pages)
     setupHamburgerMenu();
+    // Setup LinkedIn panel (index page only)
+    setupLinkedInPanel();
 });
+
+// Setup LinkedIn panel
+function setupLinkedInPanel() {
+    const toggleBtn = document.getElementById('linkedin-toggle');
+    const closeBtn = document.getElementById('linkedin-close');
+    const panel = document.getElementById('linkedin-panel');
+    const overlay = document.getElementById('linkedin-overlay');
+    
+    if (toggleBtn && panel && overlay && closeBtn) {
+        // Open panel
+        toggleBtn.addEventListener('click', () => {
+            panel.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent body scroll
+        });
+        
+        // Close panel with close button
+        closeBtn.addEventListener('click', closePanel);
+        
+        // Close panel with overlay click
+        overlay.addEventListener('click', closePanel);
+        
+        function closePanel() {
+            panel.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore body scroll
+        }
+    }
+}
 
 // Setup hamburger menu
 function setupHamburgerMenu() {
