@@ -24,7 +24,29 @@ const modeDescriptions = {
 document.addEventListener('DOMContentLoaded', () => {
     setupModeButtons();
     setupForm();
+    setupHamburgerMenu();
 });
+
+// Setup hamburger menu
+function setupHamburgerMenu() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('menu');
+    
+    if (hamburgerBtn && menu) {
+        hamburgerBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburgerBtn.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            }
+        });
+    }
+}
 
 // Setup mode buttons
 function setupModeButtons() {

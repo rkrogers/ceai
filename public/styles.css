@@ -23,6 +23,81 @@ body {
     min-height: 100vh;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+.hamburger-btn span {
+    width: 25px;
+    height: 3px;
+    background: #202124;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.hamburger-btn:hover span {
+    background: #4285f4;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.menu {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu-link {
+    color: #202124;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+
+.menu-link:hover {
+    background: #f8f9fa;
+    color: #4285f4;
+}
+
 /* Header */
 header {
     text-align: center;
@@ -300,6 +375,11 @@ footer {
     text-decoration: underline;
 }
 
+.footer-separator {
+    color: #9aa0a6;
+    margin: 0 8px;
+}
+
 .copyright {
     font-size: 12px;
     color: #9aa0a6;
@@ -383,6 +463,36 @@ footer {
     margin-top: 24px;
     padding-top: 24px;
     border-top: 1px solid #dadce0;
+}
+
+/* Who Page */
+.who-content {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.who-content h2 {
+    font-size: 28px;
+    color: #202124;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.who-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3c4043;
+    margin-bottom: 20px;
+}
+
+.linkedin-embed {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* Responsive Design */
