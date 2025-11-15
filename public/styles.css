@@ -346,11 +346,37 @@ footer {
     font-weight: 400;
 }
 
+.about-content h3 {
+    font-size: 20px;
+    color: #202124;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
 .about-content p {
     font-size: 16px;
     line-height: 1.6;
     color: #3c4043;
     margin-bottom: 20px;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tech-list li {
+    padding: 10px 0;
+    font-size: 15px;
+    color: #3c4043;
+    line-height: 1.5;
+}
+
+.tech-list li strong {
+    color: #202124;
+    font-weight: 600;
 }
 
 .back-link {
